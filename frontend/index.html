@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NASA APOD - Seu Aniversário no Espaço</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="stars"></div>
+    <div class="twinkling"></div>
+    
+    <main class="container">
+        <header>
+            <h1>NASA <span class="accent">APOD</span></h1>
+            <p>Descubra o que a NASA capturou no dia do seu aniversário</p>
+        </header>
+
+        <section class="search-section">
+            <div class="input-group">
+                <label for="birth-date">Insira sua data de nascimento:</label>
+                <div class="search-controls">
+                    <input type="date" id="birth-date" required>
+                    <button id="search-btn">Explorar</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="result-section" class="result-section hidden">
+            <div class="glass-card">
+                <div id="media-container" class="media-container">
+                    <!-- Imagem ou Vídeo será inserido aqui -->
+                    <div class="loader"></div>
+                </div>
+                <div class="content">
+                    <h2 id="apod-title"></h2>
+                    <p id="apod-date" class="date-display"></p>
+                    <p id="apod-explanation"></p>
+                </div>
+            </div>
+        </section>
+
+        <section id="error-section" class="error-section hidden">
+            <div class="error-card">
+                <p id="error-message"></p>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
